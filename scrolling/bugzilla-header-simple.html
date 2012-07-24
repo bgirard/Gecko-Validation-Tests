@@ -1,0 +1,411 @@
+<title>
+DLBI: Scrolling bugzilla header causes overinvalidation
+</title>
+<!-- Make sure we can always scroll even on large monitors -->
+<div style="position: absolute; z-indez: -100; height: 5000px; width: 1px; background-color: white;"></div>
+
+    <tbody><tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tbody><tr>
+    <td class="field_label">
+      <b><a href="page.cgi?id=fields.html#status">Status</a></b>:
+    </td>
+    <td id="bz_field_status">
+      <span id="static_bug_status">NEW
+          (<a href="#add_comment" onclick="window.setTimeout(function() { document.getElementById('bug_status').focus(); }, 10)">edit</a>)
+      </span>
+    </td>
+  </tr>
+    <tr>
+      <td class="field_label">
+        <label for="status_whiteboard" accesskey="w"><b><u>W</u>hiteboard</b></label>:
+      </td><td colspan="2">
+       <input id="status_whiteboard" name="status_whiteboard" class="text_input" value="" size="40">  
+  </td>
+    </tr>
+  
+    <tr>
+      <td class="field_label">
+        <label for="keywords" accesskey="k">
+          <b><a href="describekeywords.cgi"><u>K</u>eywords</a></b></label>:
+      </td>
+      <td class="field_value" colspan="2"><div id="keyword_container">
+         <input id="keywords" size="40" class="text_input" name="keywords" value="" type="text">
+         <div id="keyword_autocomplete"></div>
+       </div>
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label " id="field_label_product">
+
+    <label for="product">
+
+    <a title="Bugs are categorised into Products and Components. Select a Classification to narrow down this list." class="field_help_link" href="describecomponents.cgi">Product:</a>
+</label>
+</th>
+  <td class="field_value " id="field_container_product">
+        <select id="product" name="product">
+          
+            
+            
+          
+            <option value="XP Toolkit/Widgets: Menus" id="v156_component">XP Toolkit/Widgets: Menus</option>
+          
+            
+            
+          
+            <option value="XP Toolkit/Widgets: XUL" id="v158_component">XP Toolkit/Widgets: XUL</option>
+          
+            
+            
+          
+            <option value="XPCOM" id="v53_component">XPCOM</option>
+          
+            
+            
+          
+            <option value="XPConnect" id="v119_component">XPConnect</option>
+          
+            
+            
+          
+            <option value="XSLT" id="v183_component">XSLT</option>
+          
+            
+            
+          
+            <option value="XTF" id="v426_component">XTF</option>
+          
+            
+            
+          
+            <option value="XUL" id="v49_component">XUL</option>
+        </select>
+        
+
+        <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('component');
+          
+        //-->
+        </script>
+</td>
+    </tr>
+    <tr>
+      <td class="field_label">
+        <label for="version"><b>Version</b></label>:
+      </td>
+<td>
+      <select id="version" name="version">
+          <option value="1.0 Branch">1.0 Branch
+          </option>
+          <option value="1.4 Branch">1.4 Branch
+          </option>
+          <option value="1.7 Branch">1.7 Branch
+          </option>
+          <option value="1.8 Branch">1.8 Branch
+          </option>
+          <option value="1.9.0 Branch">1.9.0 Branch
+          </option>
+          <option value="1.9.1 Branch">1.9.1 Branch
+          </option>
+          <option value="1.9.2 Branch">1.9.2 Branch
+          </option>
+          <option value="2.0 Branch">2.0 Branch
+          </option>
+          <option value="5 Branch">5 Branch
+          </option>
+          <option value="6 Branch">6 Branch
+          </option>
+          <option value="7 Branch">7 Branch
+          </option>
+          <option value="8 Branch">8 Branch
+          </option>
+          <option value="9 Branch">9 Branch
+          </option>
+          <option value="10 Branch">10 Branch
+          </option>
+          <option value="11 Branch">11 Branch
+          </option>
+          <option value="12 Branch">12 Branch
+          </option>
+          <option value="13 Branch">13 Branch
+          </option>
+          <option value="14 Branch">14 Branch
+          </option>
+          <option value="15 Branch">15 Branch
+          </option>
+          <option value="16 Branch">16 Branch
+          </option>
+          <option value="17 Branch">17 Branch
+          </option>
+          <option value="Other Branch">Other Branch
+          </option>
+          <option value="Trunk">Trunk
+          </option>
+          <option value="unspecified" selected="">unspecified
+          </option>
+      </select>
+  </td>
+    </tr>
+        
+    
+        
+    <tr>
+      <td class="field_label">
+        <label for="rep_platform" accesskey="h"><b>Platform</b></label>:
+      </td>
+      <td class="field_value"><select id="rep_platform" name="rep_platform">
+          
+            
+            
+          
+            <option value="All" id="v1_rep_platform">All</option>
+          
+            
+            
+          
+            <option value="ARM" id="v9_rep_platform">ARM</option>
+          
+            
+            
+          
+            <option value="DEC" id="v2_rep_platform">DEC</option>
+          
+            
+            
+          
+            <option value="HP" id="v3_rep_platform">HP</option>
+          
+            
+            
+          
+            <option value="PowerPC" id="v4_rep_platform">PowerPC</option>
+          
+            
+            
+          
+            <option value="x86" id="v5_rep_platform" selected="selected">x86</option>
+          
+            
+            
+          
+            <option value="x86_64" id="v11_rep_platform">x86_64</option>
+          
+            
+            
+          
+            <option value="SGI" id="v6_rep_platform">SGI</option>
+          
+            
+            
+          
+            <option value="Sun" id="v7_rep_platform">Sun</option>
+          
+            
+            
+          
+            <option value="XScale" id="v10_rep_platform">XScale</option>
+          
+            
+            
+          
+            <option value="Other" id="v8_rep_platform">Other</option>
+        </select>
+        
+
+        <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('rep_platform');
+          
+        //-->
+        </script>
+       <select id="op_sys" name="op_sys">
+          
+            
+            
+          
+            <option value="All" id="v1_op_sys">All</option>
+          
+            
+            
+          
+            <option value="Windows 2000" id="v6_op_sys">Windows 2000</option>
+          
+            
+            
+          
+            <option value="Windows XP" id="v8_op_sys">Windows XP</option>
+          
+            
+            
+          
+            <option value="Windows Server 2003" id="v9_op_sys">Windows Server 2003</option>
+          
+            
+            
+          
+            <option value="Windows Server 2008" id="v49_op_sys">Windows Server 2008</option>
+          
+            
+            
+          
+            <option value="Windows Vista" id="v41_op_sys">Windows Vista</option>
+          
+            
+            
+          
+            <option value="Windows 7" id="v48_op_sys">Windows 7</option>
+          
+            
+            
+          
+            <option value="Windows 8" id="v54_op_sys">Windows 8</option>
+          
+            
+            
+          
+            <option value="Windows 8 Metro" id="v57_op_sys">Windows 8 Metro</option>
+          
+            
+            
+          
+            <option value="Windows CE" id="v34_op_sys">Windows CE</option>
+          
+            
+            
+          
+            <option value="Windows Mobile 6 Standard" id="v44_op_sys">Windows Mobile 6 Standard</option>
+          
+            
+            
+          
+            <option value="Windows Mobile 6 Professional" id="v45_op_sys">Windows Mobile 6 Professional</option>
+          
+            
+            
+          
+            <option value="Mac OS X" id="v43_op_sys" selected="selected">Mac OS X</option>
+          
+            
+            
+          
+            <option value="Linux" id="v18_op_sys">Linux</option>
+          
+            
+            
+          
+            <option value="Maemo" id="v46_op_sys">Maemo</option>
+          
+            
+            
+          
+            <option value="MeeGo" id="v51_op_sys">MeeGo</option>
+          
+            
+            
+          
+            <option value="Android" id="v50_op_sys">Android</option>
+          
+            
+            
+          
+            <option value="iOS 3" id="v52_op_sys">iOS 3</option>
+          
+            
+            
+          
+            <option value="iOS 4" id="v53_op_sys">iOS 4</option>
+          
+            
+            
+          
+            <option value="iOS 5" id="v55_op_sys">iOS 5</option>
+          
+            
+            
+          
+            <option value="BSDI" id="v19_op_sys">BSDI</option>
+          
+            
+            
+          
+            <option value="FreeBSD" id="v20_op_sys">FreeBSD</option>
+          
+            
+            
+          
+            <option value="NetBSD" id="v21_op_sys">NetBSD</option>
+          
+            
+            
+          
+            <option value="OpenBSD" id="v22_op_sys">OpenBSD</option>
+          
+            
+            
+          
+            <option value="AIX" id="v23_op_sys">AIX</option>
+          
+            
+            
+          
+            <option value="BeOS" id="v24_op_sys">BeOS</option>
+          
+            
+            
+          
+            <option value="HP-UX" id="v25_op_sys">HP-UX</option>
+          
+            
+            
+          
+            <option value="OS/2" id="v29_op_sys">OS/2</option>
+          
+            
+            
+          
+            <option value="Solaris" id="v31_op_sys">Solaris</option>
+          
+            
+            
+          
+            <option value="OpenSolaris" id="v36_op_sys">OpenSolaris</option>
+          
+            
+            
+          
+            <option value="Symbian" id="v47_op_sys">Symbian</option>
+          
+            
+            
+          
+            <option value="Gonk" id="v56_op_sys">Gonk</option>
+          
+            
+            
+          
+            <option value="Other" id="v33_op_sys">Other</option>
+        </select>
+        
+
+        <script type="text/javascript">
+        <!--
+          initHidingOptionsForIE('op_sys');
+          
+        //-->
+        </script>
+       <script type="text/javascript">
+         assignToDefaultOnChange(['product', 'component']);
+       </script>
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
