@@ -1,0 +1,22 @@
+<script>
+window.onload = function() {
+  window.canvas = document.createElement("canvas");
+  window.canvas.width = 256;
+  window.canvas.height = 256;
+  document.body.appendChild(window.canvas);
+
+  requestAnimationFrame(step);
+
+}
+
+function randomColor() {
+  return Math.floor(Math.random() * 256);
+}
+
+function step() {
+  requestAnimationFrame(step);
+  var context = window.canvas.getContext("2d");
+  context.fillStyle = "rgb(" + randomColor() + "," + randomColor() + "," + randomColor() + ")";
+  context.fillRect(0, 0, 256, 256);
+}
+</script>
