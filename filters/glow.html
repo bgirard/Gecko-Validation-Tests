@@ -1,0 +1,33 @@
+<p>feColorMatrix Example 1</p>
+
+<svg width="640" height="550" viewBox="0 0 640 550">
+<defs>
+    <filter id="saturate">
+      <feColorMatrix id="matrix" in="SourceGraphic"  values="
+      1 0 0 0 0
+      0 1 0 0 0
+      0 0 1 0 0
+      0 0 0 1 0"/>
+    </filter>
+  </defs>
+  <image x="10" y="10" width="280" height="350" preserveAspectRatio="true" xlink:href="http://blog.ffextensionguru.com/images/firefox_logo-only_RGB.png"/>
+  <image x="310" y="10" width="280" height="350" preserveAspectRatio="true" filter="url(#saturate)" xlink:href="http://blog.ffextensionguru.com/images/firefox_logo-only_RGB.png"/>
+</svg>
+
+<script>
+var frameid = 0;
+function animate() {
+  frameid++;
+  requestAnimationFrame(animate);
+
+  var val = 1 + 0.2*Math.sin(frameid/5);
+  var matrix = document.getElementById("matrix");
+  matrix.setAttribute('values',
+      val + " 0 0 0 0 " + 
+      "0 1 0 0 0 " + 
+      "0 0 1 0 0 " +
+      "0 0 0 1 0");
+}
+requestAnimationFrame(animate);
+</script>
+
